@@ -5,10 +5,9 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello World!!!!!");
 
-		
-		System.out.println(soma (1,1));
-		System.out.println(multiply(3,3));
-		System.out.println(operacaoComplexa (3,3));
+		System.out.println(soma(1, 1));
+		System.out.println(multiply(3, 3));
+		System.out.println(operacaoComplexa(3, 3));
 	}
 
 	public static int soma(int aNum1, int aNum2) {
@@ -23,12 +22,10 @@ public class Main {
 		int a = int1 * int2;
 		return a;
 	}
-	
-	public static int operacaoComplexa (int aNum1, int aNum2)
-	{
-		return soma (multiply (aNum1, aNum2), sub (aNum1, aNum2));
+
+	public static int operacaoComplexa(int aNum1, int aNum2) {
+		int result = soma(aNum1, aNum2) * sub(aNum1, aNum2);
+		return result;
 	}
-	
-	
 
 }
