@@ -25,6 +25,7 @@ public class Main {
 
 	public static int operacaoComplexa(int aNum1, int aNum2) {
 		int result = soma(aNum1, aNum2) * sub(aNum1, aNum2);
+		System.out.println(result);
 		return result;
 	}
 
