@@ -7,7 +7,6 @@ public class Main {
 
 		System.out.println(soma(1, 1));
 		System.out.println(multiply(3, 3));
-		System.out.println(operacaoComplexa(3, 3));
 	}
 
 	public static int soma(int aNum1, int aNum2) {
@@ -21,11 +20,6 @@ public class Main {
 	public static int multiply(int int1, int int2) {
 		int a = int1 * int2;
 		return a;
-	}
-
-	public static int operacaoComplexa(int aNum1, int aNum2) {
-		int result = soma(aNum1, aNum2) * sub(aNum1, aNum2);
-		return result;
 	}
 
 }
