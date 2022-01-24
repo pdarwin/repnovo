@@ -1,4 +1,4 @@
-package repnovo;
+package ficha1;
 
 public class Main {
 
