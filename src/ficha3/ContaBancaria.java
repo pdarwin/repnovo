@@ -10,12 +10,14 @@ import java.util.Date;
 public class ContaBancaria {
 	
 	private String titular; 
-	private double saldo = 0.0;
-	private Date dataAbertura =  new Date();
+	private double saldo;
+	private Date dataAbertura;
 	
 	public ContaBancaria(String titular) {
 		super();
 		this.titular = titular;
+		saldo = 0.0;
+		dataAbertura =  new Date();
 		/*
 		 * DateFormat df = new SimpleDateFormat("dd/M/yyyy"); try { this.dataAbertura =
 		 * df.parse("31/12/2021"); } catch (ParseException e) { // TODO Auto-generated
@@ -23,30 +25,15 @@ public class ContaBancaria {
 		 */
 	}
 	
-	public String getTitular() {
-		return titular;
-	}
-
-	public void setTitular(String titular) {
-		this.titular = titular;
-	}
-
-	public double getSaldo() {
-		return saldo;
-	}
-
-	public Date getDataAbertura() {
-		return dataAbertura;
-	}
-	
 	@Override
 	public String toString ()
 	{
-		DateFormat df = new SimpleDateFormat("DD/MM/YYYY");
+		DateFormat df = new SimpleDateFormat("dd/MM/YYYY");
 		DecimalFormat decF = new DecimalFormat("0.00");
+		Date date = new Date();
 		
 		return "Titular: " + titular + "| Saldo: €" + decF.format(saldo) +
-				"| Data Abertura: " + df.format(dataAbertura);
+				"| Data Abertura: " + df.format(date);
 	}
 
 	// método getInformaçãoConta() que retorna uma String com o titular,
@@ -78,11 +65,21 @@ public class ContaBancaria {
 		else return false;
 	}
 	
-	 /*
+	public String getTitular() {
+		return titular;
+	}
 
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
 
-	Escreva a função main() para testar a classe ContaBancária. Crie uma conta, efetue
-	depósitos e levantamentos e imprima no ecrã a informação da conta sempre que atualiza o
-	saldo. */
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public Date getDataAbertura() {
+		return dataAbertura;
+	}
+	
 
 }

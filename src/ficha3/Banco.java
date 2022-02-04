@@ -1,43 +1,72 @@
 package ficha3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Banco {
 
 	private String nome;
-	private ContaBancaria contas[];
+	private List<ContaBancaria> contasBancarias;
 	
+	/**
+	 * Construtor do banco
+	 * @param nome - nome do banco
+	 */
 	public Banco(String nome) {
 		super();
 		this.nome = nome;
-		this.contas = new ContaBancaria [100];
+		contasBancarias = new ArrayList<ContaBancaria>(100);
 	}
 	
-	public ContaBancaria[] getContas ()
-	{
-		return contas;
-	}
-	
-	public void setContas (ContaBancaria[] contas)
-	{
-		this.contas = contas;
-	}
-	
+	/**
+	 * Cria uma conta
+	 * @param conta conta a ser criada
+	 */
 	public void criaConta (ContaBancaria conta)
 	{
-		contas [contas.length] = conta;
+		contasBancarias.add(conta);
 	}
 	
+	/**
+	 * 
+	 * @param titular - titular da conta
+	 * @return retorna a conta bancária
+	 */
 	public ContaBancaria getConta (String titular)
 	{
-		ContaBancaria contaBancaria = null;
-		for (int i = 0; i < contas.length; i++)
+		for (ContaBancaria conta : contasBancarias)
 		{
-			if (contas[i].getTitular() == titular)
+			if (conta.getTitular().equals(titular))
 			{
-				contaBancaria = contas[1];
+				return conta;
 			}
 		}
-		
-		return contaBancaria;
+		return null;
 	}
 	
+	/**
+	 * 
+	 * @return array de contas bancárias
+	 */
+	public List<ContaBancaria> getContas ()
+	{
+		return contasBancarias;
+	}
+	
+	/**
+	 * 
+	 * @param contas - array de contas bancárias
+	 */
+	public void setContas (List<ContaBancaria> contas)
+	{
+		this.contasBancarias = contas;
+	}
+	
+	/**
+	 * 
+	 * @return nome do banco
+	 */
+	public String getNome() {
+		return nome;
+	}
 }
