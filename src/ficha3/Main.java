@@ -27,7 +27,7 @@ public class Main {
 		
 		/* testes banco */
 		Banco banco = new Banco("Banco Nacional Javanês");
-		System.out.println("Banco Nacional Javanês criado com sucesso. Pode agora criar a sua primeira conta!\n");
+		System.out.println("\nBanco Nacional Javanês criado com sucesso. Pode agora criar a sua primeira conta!\n");
 		
 		Scanner sc = new Scanner(System.in);
 		
