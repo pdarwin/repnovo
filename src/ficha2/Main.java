@@ -1,16 +1,14 @@
 package ficha2;
 
-import java.util.Dictionary;
 import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		 Scanner pergunta = new Scanner (System.in);
+		 
 		/*
 		 * System.out.println("Triângulo: " + areaTriang (5, 3) );
 		 * System.out.println("Rectângulo: " + areaRect(5, 3) );
@@ -18,16 +16,15 @@ public class Main {
 		 * System.out.println("Factorial: " + factor(5) );
 		 * System.out.println("Factorial rec: " + factorRecursivo(5) );
 		 */
-		Scanner pergunta = new Scanner (System.in);
-		System.out.println("Introduza a frase:");
-		String frase = pergunta.nextLine();
-		System.out.println("O número total de vogais na frase \"" + frase + "\" é: " + 
-				numTotalVogais(frase) );
-		numVogais2 (frase);
 		/*
-		 * System.out.println("Introduza o n.º de segundos:");
-		 * convertSeconds(pergunta.nextInt());
+		 * System.out.println("Introduza a frase:"); String frase = pergunta.nextLine();
+		 * System.out.println("O número total de vogais na frase \"" + frase + "\" é: "
+		 * + numTotalVogais(frase) ); numVogais2 (frase);
 		 */
+		
+		  System.out.println("Introduza o n.º de segundos:");
+		  convertSeconds(pergunta.nextInt());
+		 
 		pergunta.close();
 	}
 	
@@ -139,10 +136,6 @@ public class Main {
 	
 	public static void numVogais2 (String aFrase)
 	{
-		// 	função chamada na função chamada numVogais que recebe uma String (frase) e imprime a quantidade de cada vogal na mesma.
-		
-		int nA = 0, nE = 0, nI = 0, nO = 0, nU = 0;
-	
 		HashMap<String, Integer> vogais = new HashMap<String, Integer>();
 		vogais.put("a", 0);
 		vogais.put("e", 0);
@@ -180,15 +173,39 @@ public class Main {
         }
 	}
 	
-	public static void convertSeconds (int aSegundos)
+	/**
+	 * 
+	 * @param aS -> segundos
+	 */
+	public static void convertSeconds (int aS)
 	{
 		// 	Escreva uma função chamada convertSeconds que recebe um número (segundos) e imprime o número de minutos, horas, dias e meses (considere que um mês tem 30 dias).
 		
-		System.out.println("Segundos:" + aSegundos);
-		System.out.println("Minutos :" + aSegundos /60);
-		System.out.println("Horas   :" + aSegundos /60 /60);
-		System.out.println("Dias    :" + aSegundos /60 /60/ 24);
-		System.out.println("Meses:  :" + aSegundos /60 /60/ 24/ 30);
+		int s = 0, m = 0, h = 0, d= 0, M = 0;
+		
+		s = aS % 60; // resto da divisão por 60
+		m = aS / 60; // minutos = segundos / 60
+		
+		if (m >= 60) // se minutos maior que 60, passa a horas
+		{
+			h = m/ 60;
+			m %= 60;
+			
+			if (h >= 24) // se horas maior que 24, passa a dias
+			{
+				d = h/ 24;
+				h %= 24;
+				if (d >= 30)
+				{
+					M = d/30;
+					d %= 30;
+				}
+			}
+		}
+		
+		
+		System.out.println("Segundos:" + s + "  Minutos: " + m + "  Horas: " + h + 
+				"  Dias: " + d + "  Meses: " + M);
 	}
 
 	
