@@ -7,6 +7,7 @@ public class Banco {
 
 	private String nome;
 	private List<ContaBancaria> contasBancarias;
+	private List<Casa> casas;
 	
 	/**
 	 * Construtor do banco
@@ -16,6 +17,7 @@ public class Banco {
 		super();
 		this.nome = nome;
 		contasBancarias = new ArrayList<ContaBancaria>(100);
+		casas = new ArrayList<Casa>();
 	}
 	
 	/**
@@ -69,4 +71,46 @@ public class Banco {
 	public String getNome() {
 		return nome;
 	}
+	
+	/**
+	 * Adiciona uma casa à lista de casas do banco
+	 * @param casa a ser adicionada
+	 */
+	public void addCasa (Casa casa)
+	{
+		casas.add(casa);
+	}
+	
+	/**
+	 * 
+	 * @param morada -> morada da casa a procurar
+	 * @return retorna a casa pela morada
+	 */
+	public Casa getCasaByMorada (String morada)
+	{
+		for (Casa casa : casas)
+		{
+			if (casa.getMorada().equals(morada))
+			{
+				return casa;
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * Remove uma casa pela morada
+	 * @param morada -> morada da casa a remover
+	 * @return verdade se removeu, senão falso
+	 */
+	public boolean remCasaByMorada (String morada)
+	{
+		if (getCasaByMorada(morada)!= null)
+		{
+			casas.remove(casas.indexOf(getCasaByMorada(morada)));
+			return true;
+		}
+		return false;
+	}
+	
 }
