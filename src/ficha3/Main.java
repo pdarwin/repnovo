@@ -1,5 +1,6 @@
 package ficha3;
 
+import java.security.cert.PolicyQualifierInfo;
 import java.util.Scanner;
 
 public class Main {
@@ -43,13 +44,15 @@ public class Main {
 		  
 		  System.out.println("Casas adicionadas ao banco com sucesso");
 		  
+		  // Esta existe, imprime
 		  System.out.println(banco.getCasaByMorada("Funchal"));
+		  // Esta não existe, retorna null
 		  System.out.println(banco.getCasaByMorada("Santana"));
 		  
-		  System.out.println(banco.remCasaByMorada("Funchal"));
-		  System.out.println(banco.remCasaByMorada("Santana"));
+		  System.out.println(banco.remCasaByMorada("Funchal")); // True, pq existe
+		  System.out.println(banco.remCasaByMorada("Santana"));	// False, pq n existe
 		  
-		  System.out.println(banco.remCasaByMorada("Funchal"));
+		  System.out.println(banco.remCasaByMorada("Funchal")); // False, pq já n existe
 		  
 		  
 			/*
