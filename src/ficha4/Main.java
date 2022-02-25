@@ -41,7 +41,20 @@ public class Main {
 		System.out.println("Fruta a Unidade: " + cesto.getTotalFrutosFromTipo("FrutaUnidade"));
 		System.out.println("Fruta a Volume: " + cesto.getTotalFrutosFromTipo("FrutaVolume"));
 		
+		System.out.println("\nTestando Ex.º 3");
 		
+		
+		maca = new FrutaPeso("Maçã", 10, 1);
+		
+		maca.setPercentagemDesconto(10);
+		
+		System.out.println(maca.pagar());
+		
+		polpaMaracuja = new FrutaVolume("Polpa de Maracujá", 20, 1);
+		
+		polpaMaracuja.setPercentagemDesconto(5);
+		
+		System.out.println(polpaMaracuja.pagar());
 	}
 
 }

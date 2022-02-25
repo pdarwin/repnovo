@@ -1,0 +1,44 @@
+Projeto Extra 1
+1. Descrição
+Neste projeto pretende-se que o aluno desenvolva uma aplicação que gere uma “App
+Store”, permitindo a inserção e consulta de informação relevante.
+Existem dois tipos de utilizadores, os clientes e os programadores. Cada utilizador é
+caraterizado por um nome, idade, e número de utilizador único. Os clientes realizam compras
+na App Store. Os programadores são caraterizados pelas aplicações que desenvolveram, e
+pelas avaliações dos utilizadores às aplicações que desenvolveram (classificação de 1 a 5).
+As aplicações têm associado um nome, um preço, uma avaliação (classificação de 1 a
+5), um tipo (Games, Business, Education, Lifestyle, Entertainment, Utilities, Travel e Health &
+Fitness) e um programador.
+As compras das aplicações ocorrem numa determinada data e com um preço
+determinado. Cada compra pode conter várias aplicações e está sempre associado a um
+cliente.
+
+A avaliação dos programadores e das aplicações é dinâmica e vai-se atualizando à
+medida que novos utilizadores avaliam, devendo representar a média de todas as
+classificações. Os utilizadores avaliam as aplicações só após estas terem sido compradas.
+Além da avaliação (classificação de 1 a 5), os utilizadores também podem opcionalmente
+deixar comentários.
+
+A aplicação da App Store deve permitir:
+• Registar novos utilizadores e atribuir automaticamente números únicos.
+• Incluir novas aplicações com a informação necessária.
+• Listar todos os utilizadores da App Store. Para cada utilizador é mostrado o nome, idade,
+e número de utilizador.
+• Realizar compras de aplicações.
+• Atribuir a uma aplicação uma avaliação (e comentários) dados por um utilizador e atualizar
+a classificação do programador e da aplicação.
+• Fazer listagens seletivas das apps por categoria e por classificação dos utilizadores.
+• Fazer listagens ordenadas das apps por nome, por número de vendas e por classificação
+dos utilizadores.
+• Listar as classificações e comentários (se houver) de uma aplicação em concreto.
+• Listar as aplicações de um utilizador em concreto (independentemente de ser cliente ou
+programador).
+• Imprimir o valor total que a App Store recebeu do conjunto dos seus utilizadores.
+• Imprimir o valor total que cada programador recebeu do conjunto das suas apps.
+• Sair da aplicação.
+
+2. Considerações gerais
+O problema deve ser abordado de forma gradual, começando pela fase de modelação.
+As classes devem ser testadas à medida que vão sendo desenvolvidas. Os pormenores de
+interface com o utilizador não são considerados e deverão ser implementados da forma que
+for considerado mais pertinente. 

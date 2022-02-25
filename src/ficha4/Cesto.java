@@ -35,7 +35,14 @@ public class Cesto {
 	 */
 	public void addFruta (Fruta fruta)
 	{
-		frutas.add(fruta);
+		if (frutas.size() <= 100)
+			{ 
+				frutas.add(fruta);
+			}
+		else 
+			{	
+				System.out.println("Cesto cheio, não foi possível adicionar");
+			}
 	}
 
 	/**
