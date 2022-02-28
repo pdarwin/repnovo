@@ -52,9 +52,11 @@ public class Main {
 		
 		polpaMaracuja = new FrutaVolume("Polpa de Maracujá", 20, 1);
 		
-		polpaMaracuja.setPercentagemDesconto(5);
+		System.out.println("Pagar sem desconto:" + polpaMaracuja.pagar());
 		
-		System.out.println(polpaMaracuja.pagar());
+		polpaMaracuja.setPercentagemDesconto(5);	
+		
+		System.out.println("Pagar com desconto:" + polpaMaracuja.pagar());
 	}
 
 }

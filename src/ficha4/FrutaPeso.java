@@ -38,7 +38,7 @@ public class FrutaPeso extends Fruta implements iDescontavel {
 	 */
 	@Override
 	public double descontar() {
-		return peso * precoBase * percentagemDesconto / 100 ;
+		return peso * precoBase * percentagemDesconto / 100 ; 
 	}
 
 	
