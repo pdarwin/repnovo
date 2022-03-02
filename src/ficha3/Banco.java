@@ -14,7 +14,6 @@ public class Banco {
 	 * @param nome - nome do banco
 	 */
 	public Banco(String nome) {
-		super();
 		this.nome = nome;
 		contasBancarias = new ArrayList<ContaBancaria>(100);
 		casas = new ArrayList<Casa>();
