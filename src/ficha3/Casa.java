@@ -10,15 +10,13 @@ public class Casa {
 	 * Construtor
 	 */
 	public Casa() {
-		super();
 	}
 	
 	/**
-	 * 
+	 * Outro construtor
 	 * @param morada - morada da casa
 	 */
 	public Casa(String morada) {
-		super();
 		this.morada = morada;
 	}
 

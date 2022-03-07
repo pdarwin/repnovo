@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>180</y>
+      <w>260</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Banco
+--
+-nome : String
+--
++Banco(nome : String)
++criaConta(conta : ContaBancaria)
++getConta(titular : String)
++getContas()
++setContas(List&lt;ContaBancaria&gt;)
++addCasa (casa : Casa)
++getCasaByMorada (morada : String)
++remCasaByMorada (morada : String)
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>180</y>
+      <w>230</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Casa
+--
+-morada : String
+-precoCusto : double
+-precoVenda : double
+--
++Casa()
++Casa(morada : String)
++getLucro()
++getPercentMargemLucro()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>560</y>
+      <w>240</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>ContaBancaria
+--
+-titular : String
+-saldo : double
+-dataAbertura : Date
+--
++ContaBancaria(titular : String)
++getInformacaoConta()
++depositar(aValor : double)
++levantar(aValor : double)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>370</y>
+      <w>70</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..100</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>180</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -55,8 +55,8 @@ public class ContaBancaria {
 	// método levantar(…) que recebe o valor a levantar da conta (double) e atualiza o
 	// respetivo saldo. Não devem ser permitidos levantamentos que coloquem o saldo
 	// negativo.
-	public boolean levantar(double aValor){
-		
+	public boolean levantar(double aValor)
+	{	
 		if ((saldo - aValor) >= 0)
 		{
 			saldo -= aValor;
@@ -65,21 +65,23 @@ public class ContaBancaria {
 		else return false;
 	}
 	
-	public String getTitular() {
+	public String getTitular() 
+	{
 		return titular;
 	}
 
-	public void setTitular(String titular) {
+	public void setTitular(String titular) 
+	{
 		this.titular = titular;
 	}
 
-	public double getSaldo() {
+	public double getSaldo() 
+	{
 		return saldo;
 	}
 
-	public Date getDataAbertura() {
+	public Date getDataAbertura() 
+	{
 		return dataAbertura;
 	}
-	
-
 }
