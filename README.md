@@ -1,8 +1,7 @@
 # Fichas resolvidas
 ## Ficha 3
 ### Exercício 5: Diagrama de classes - Banco
-![Diagrama Classes Banco](https://user-images.githubusercontent.com/46503478/157092510-c026ecb4-5408-4ba4-b4dc-b5a4f274d87e.jpg)
-
+![Diagrama Classes Banco](https://user-images.githubusercontent.com/46503478/157092611-ee288db8-ece6-4650-a3ec-b284bef7cba9.jpg)
 
 ## Ficha 6
 ### Exercício 1: Diagrama de casos - Biblioteca
