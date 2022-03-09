@@ -1,6 +1,5 @@
 package ficha3;
 
-import java.security.cert.PolicyQualifierInfo;
 import java.util.Scanner;
 
 public class Main {
